@@ -2,11 +2,12 @@
 Colors used:
   Color 1:  white   rgb(255,255,255)
   Color 2:  grey    rgb(225,225,225)
-  Color 3:  teal    rgb(25,133,161)
-  Color 4:  yellow  rgb(255,212,0)
+  Color 3:  PRIMARY teal    rgb(25,133,161)
+  Color 4:  SECONDARY yellow  rgb(255,212,0)
   Color 5:  black   rgb(0,0,0)
 */
 
+/*TYPOGRAPHY*/
 body{
   background-color: rgb(255,255,255);
   font-family: 'Rubik', sans-serif;
@@ -35,14 +36,101 @@ h2{
 h3{
   font-family: 'Khula', sans-serif;
   font-size: 1.5em;
+  font-weight: 600;
+}
+
+h4{
+  font-family: 'Khula', sans-serif;
+  font-size: 1.5em;
   font-weight: 400;
 }
 
 .quotes{
-  font-weight: 300;
+  font-weight: 600;
     font-size: 1.5em;
 }
 
 .makeUppercase {
 	text-transform: uppercase;
 }
+
+.makeBold {
+  font-weight:bold;
+}
+
+
+/* STYLING */
+img {
+  width: 100%;
+}
+
+  /* Hyperlinks */
+  a {
+  color: rgb(25,133,161);
+  text-decoration: none; /* No underlining */
+  }
+  a:visited { /* visited link */
+    color: #16748B;
+  }
+  /* a:hover must come after a:visited in the CSS definition in order to be effective! */
+  a:hover {
+    color: rgb(0F5363);
+    text-decoration: underline; /* Underlining when hovering over a link */
+  }
+  /* a:active must come after a:hover in the CSS definition in order to work */
+  a:active { /* selected link */
+    color: #4FC6E3;
+  }
+    /* Accessibility for Users who visit the page with a keyboard */
+    /a:hover,
+    a:focus {
+      color: #cc6540;
+      text-decoration: underline;
+    }
+
+    /* Buttons SHOULD BE NEAR THE END OF STYLE SHEET*/
+    .button {
+        display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+        background-color: rgb(25,133,161);
+        color: #ffffff; /* needed to override the default link color */
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 5px;
+        border-right: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF; /* width of the border, type, color */
+        transition: 0.2s opacity;
+      }
+      .button:hover{
+        opacity: 0.8;
+        text-decoration: none;
+        border-bottom: 2px solid #FFD400;
+        border-right: 2px solid #FFD400;
+      }
+      .button:active{
+        opacity: 0.8;
+        text-decoration: none;
+        border-bottom: 2px solid #FFD400;
+        border-right: 2px solid #FFD400;
+      }
+      .button:visited{
+        color: #ffffff;
+      }
+      .button.secondary{
+        background-color: transparent;
+        text-decoration-color: rgb(25,133,161);
+        border: 1px solid rgb(25,133,161);
+
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .button.secondary:visited{
+        color: rgb(25,133,161);
+      }
+      .button.secondary:hover{
+        background-color: rgb(25,133,161);
+        color: #ffffff;
+      }
+      .button:active{
+        background-color: rgb(25,133,161);
+        color: #ffffff; 
+      }
