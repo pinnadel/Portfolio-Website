@@ -14,72 +14,72 @@
 
 <body>
   <header>
-    <div>
-      <a href="index.html">
-        <img src="img/branding/logo.png" alt="Logo unavailable" width="160">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/branding/logo.png" alt="Logo unavailable" >
       </a>
       <nav>
         <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li> <a href="index.html"> Work </a> </li>
+          <li> <a href="about.html"> About</a> </li>
+          <li> <a href="contact.html"> Contact </a> </li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <!-- For the hero section -->
-    <div>
-      <h1>Hi, my name is Philipp Klein <br><span>I'm a UX Designer, based in Graz!</span></h1>
-      <p> Generating fresh ideas, tackling real human problems, ALWAYS bearing in mind a user-centered design approach</p>
-      <a href="about.html" class="button secondary">Check out my skills</a>
-    </div>
-    <div>
-      <!-- For whole work block-->
-      <h2>My Work</h2>
-      <div>
-        <!-- Container wrapper -->
-        <div>
-          <!-- row for columns first project -->
+    <div class="container">
+      <div id="hero">
 
-          <!-- column 1 - picture -->
-          <a href="campaide.html">
-            <picture>
-              <source srcset="img/campaide/campaide_project_thumbnail@1.jpg" media="(max-width:767px)">
-              <img src="img/campaide/campaide_project_thumbnail@2.jpg" alt="My Image">
-            </picture>
-          </a>
+        <h1>Hi, my name is Philipp Klein <br><span>I'm a UX Designer, based in Graz!</span></h1>
+        <p> Generating fresh ideas, tackling real human problems, ALWAYS bearing in mind a user-centered design approach</p>
+        <a href="about.html" class="button secondary">Check out my skills</a>
+        <!-- For whole work block-->
 
-        </div>
-        <div>
-          <!-- column 2 - heading, decription, CTA -->
-          <h3>CampAide</h3>
-          <p>Bring unused campers to life</p>
-          <a href="campaide.html" class="button">Read more</a>
-        </div>
-      </div>
-      <div>
-        <!-- row for columns second project -->
-        <div>
-          <!-- column 1 - heading, decription, CTA -->
-          <h3>VoCa</h3>
-          <p>Learn new vocabulary while on the go</p>
-          <a href="voca.html" class="button">Read more</a>
-        </div>
-      </div>
-      <div>
-        <!-- column 2 - picture -->
-        <a href="voca.html">
-          <picture>
-            <source srcset="img/voca/voca_project_thumbnail@1.jpg" media="(max-width:767px)">
-            <img src="img/voca/voca_project_thumbnail@2.jpg" alt="My Image">
-          </picture>
-        </a>
+        <h2>My Work</h2>
+        <div class="portfolioelement row">
+          <!-- Container wrapper -->
+          <div class="portfoliopicture">
+            <!-- row for columns first project -->
+            <!-- column 1 - picture -->
+            <a href="campaide.html">
+              <picture>
+                <source srcset="img/campaide/campaide_project_thumbnail@1.jpg" media="(max-width:767px)">
+                <img src="img/campaide/campaide_project_thumbnail@2.jpg" alt="My Image">
+              </picture>
+            </a>
+          </div class="portfoliopicture">
+          <div class="portfoliodescription">
+            <!-- column 2 - heading, decription, CTA -->
+            <h3>CampAide</h3>
+            <p>Bring unused campers to life</p>
+            <a href="campaide.html" class="button">Read more</a>
+          </div class="portfoliodescription">
+        </div class="portfolioelement">
+
+        <div class="portfolioelement row">
+          <!-- row for columns second project -->
+          <div class="portfoliopicture">
+            <!-- column 2 - picture -->
+            <a href="voca.html">
+              <picture>
+                <source srcset="img/voca/voca_project_thumbnail@1.jpg" media="(max-width:767px)">
+                <img src="img/voca/voca_project_thumbnail@2.jpg" alt="My Image">
+              </picture>
+            </a>
+          </div class="portfoliopicture">
+          <div class="portfoliodescription">
+            <!-- column 1 - heading, decription, CTA -->
+            <h3>VoCa</h3>
+            <p>Learn new vocabulary while on the go</p>
+            <a href="voca.html" class="button">Read more</a>
+          </div class="portfoliodescription">
+        </div class="portfolioelement">
       </div>
     </div>
   </main>
   <footer>
-    <div>
+    <div class="container">
       <h2>Get in Touch</h2>
       <div>
         <p>Do you like my work and you want to talk about your next project? You can drop me a line at <a href="mailto:klein_ph@hotmail.com">klein_ph@hotmail.com</a> </p>
@@ -89,19 +89,20 @@
         <a href="https://www.linkedin.com/in/philipp-klein/">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve" width="25px">
             <path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
-              C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
-              H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
-              c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
-              s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
-              c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
-              c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
-              c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
-              L341.91,330.654L341.91,330.654z" />
+                C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+                H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+                c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+                s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+                c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+                c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+                c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+                L341.91,330.654L341.91,330.654z" />
           </svg>
         </a>
       </div>
-    </div>
-    <p> &#169 Philipp Klein 2020</p>
+      <p>Philipp Klein 2020</p>
+    </div class="container">
+
   </footer>
 </body>
 
