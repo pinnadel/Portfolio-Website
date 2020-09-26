@@ -6,192 +6,199 @@ Colors used:
   Color 4:  SECONDARY yellow  rgb(255,212,0)
   Color 5:  black   rgb(0,0,0)
 */
-
 * {
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(255,255,255);
+body {
+  background-color: rgb(255, 255, 255);
   font-family: 'Rubik', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
-  font-weight: 300; /* Sets the font weight to 300 */
-  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  font-weight: 300;
+  /* Sets the font weight to 300 */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 * the font-size */
   color: #4a4a4a;
 }
 
-img {
-  width: 100%;
-}
-
-header{
+header {
   background-color: #ffffff;
   text-align: center;
   padding: 10px 0;
-
   /* Shadow */
-position: fixed;
-
   -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
-  -moz-box-shadow:    0px 2px 7px 0px rgba(50, 50, 50, 0.68);
-  box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.68);
-
+  -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
+  box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
 }
 
-
-
-main{
-  padding-top: 159px;
-}
-footer{
-
-}
-
+footer {}
 
 /*TYPOGRAPHY*/
 h1, h2, h3, h4 {
   line-height: 1.4;
 }
 
-h1{
+h1 {
   font-family: 'Khula', sans-serif;
   font-size: 2.75em;
   font-weight: 800;
 }
 
-h2{
+h2 {
   font-family: 'Noto Serif', serif;
   font-size: 2.25em;
   font-weight: 600;
 }
 
-h3{
+h3 {
   font-family: 'Khula', sans-serif;
   font-size: 1.5em;
   font-weight: 600;
 }
 
-h4{
+h4 {
   font-family: 'Khula', sans-serif;
   font-size: 1.5em;
   font-weight: 400;
 }
 
-.quotes{
+.quotes {
   font-weight: 600;
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .makeUppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .makeBold {
-  font-weight:bold;
+  font-weight: bold;
 }
 
+/* Hyperlinks */
+a {
+  color: rgb(25, 133, 161);
+  text-decoration: none;
+  /* No underlining */
+}
+
+a:visited {
+  /* visited link */
+  color: #16748B;
+}
+
+/* a:hover must come after a:visited in the CSS definition in order to be effective! */
+a:hover {
+  color: rgb(0F5363);
+  text-decoration: underline;
+  /* Underlining when hovering over a link */
+}
+
+/* a:active must come after a:hover in the CSS definition in order to work */
+a:active {
+  /* selected link */
+  color: #4FC6E3;
+}
+
+/* Accessibility for Users who visit the page with a keyboard */
+/a:hover,
+a:focus {
+  color: #cc6540;
+  text-decoration: underline;
+}
+
+/* Buttons SHOULD BE NEAR THE END OF STYLE SHEET*/
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: rgb(25, 133, 161);
+  color: #ffffff;
+  /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  /* width of the border, type, color */
+  transition: 0.2s opacity;
 
 
+}
+
+.button:hover {
+  text-decoration: none;
+  border-right: solid #FFD400;
+  border-bottom: solid #FFD400;
 
 
-  /* Hyperlinks */
-  a {
-  color: rgb(25,133,161);
-  text-decoration: none; /* No underlining */
-  }
-  a:visited { /* visited link */
-    color: #16748B;
-  }
-  /* a:hover must come after a:visited in the CSS definition in order to be effective! */
-  a:hover {
-    color: rgb(0F5363);
-    text-decoration: underline; /* Underlining when hovering over a link */
-  }
-  /* a:active must come after a:hover in the CSS definition in order to work */
-  a:active { /* selected link */
-    color: #4FC6E3;
-  }
-    /* Accessibility for Users who visit the page with a keyboard */
-    /a:hover,
-    a:focus {
-      color: #cc6540;
-      text-decoration: underline;
-    }
+}
 
-    /* Buttons SHOULD BE NEAR THE END OF STYLE SHEET*/
-    .button {
-        display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-        background-color: rgb(25,133,161);
-        color: #ffffff; /* needed to override the default link color */
-        font-weight: 400;
-        padding: 10px;
-        border-radius: 5px;
-        border-right: 2px solid #FFFFFF;
-        border-bottom: 2px solid #FFFFFF; /* width of the border, type, color */
-        transition: 0.2s opacity;
-      }
-      .button:hover{
-        opacity: 0.8;
-        text-decoration: none;
-        border-bottom: solid #FFD400;
-        border-right: solid #FFD400;
-      }
-      .button:active{
-        opacity: 0.8;
-        text-decoration: none;
-        border-bottom: solid #FFD400;
-        border-right: olid #FFD400;
-      }
-      .button:visited{
-        color: #ffffff;
-      }
-      .button.secondary{
-        background-color: transparent;
-        text-decoration-color: rgb(25,133,161);
-        border: 1px solid rgb(25,133,161);
+.button:active {
+  opacity: 0.8;
+  text-decoration: none;
+  border-bottom: solid #FFD400;
+  border-right: solid #FFD400;
+}
 
-        padding: 10px;
-        border-radius: 5px;
-      }
-      .button.secondary:visited{
-        color: rgb(25,133,161);
-      }
-      .button.secondary:hover{
-        background-color: rgb(25,133,161);
-        color: #ffffff;
-      }
-      .button:active{
-        background-color: rgb(25,133,161);
-        color: #ffffff;
-      }
+.button:visited {
+  color: #ffffff;
+}
+
+.button.secondary {
+  color: rgb(25, 133, 161);
+  background-color: #ffffff;
+  /* Need to override color from primary button */
+  border: 1px solid rgb(25, 133, 161);
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.2s opacity;
+}
+
+.button.secondary:hover {
+  background-color: rgb(25, 133, 161);
+  color: #ffffff;
+}
+
+.button:active {
+  background-color: rgb(25, 133, 161);
+  color: #ffffff;
+}
 
 /* LAYOUT styling */
-
-.container{
+.container {
   padding: 0 15px;
 }
 
-.row{
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
-}
-
-.rowbutton{
-  padding: 10px;
+.rowbutton {
   margin: auto;
 }
 
-.portfolioelement{
-  padding-bottom: 25px;
+.row {
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
+}
+
+.portfolioelement {
+  padding-top: 25px;
   border-bottom: 2px solid #FFD400;
 }
 
-#hero h1 {
-  text-align: center; /* Centers text */
+.portfoliodescription {
+  text-align: left;
+
 }
 
-#hero{
-  padding: 20px 0; /* add some space (padding) to the top and bottom of your hero section to give its content some space */
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+#hero {
+  padding: 20px 0;
+  /* add some space (padding) to the top and bottom of your hero section to give its content some space */
   display: inline-block;
+  text-align: center;
   width: 100%
 }
 
@@ -199,27 +206,152 @@ h4{
   max-width: 250px;
 }
 
-
-nav{
-    list-style-type: none;
-    display: inline-block;
-    width:100%;
+img{
+    width: 100%;
+    max-height: auto;
 }
-  nav > ul{
-      padding:0px;
+
+
+.berlin-illustration{
+  width 100%, max-width 100%, height: auto
+}
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Illustration Animation  END*/
+
+nav {
+  list-style-type: none;
+  display: inline-block;
+  width: 100%;
+}
+
+nav>ul {
+  padding: 0px;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+nav>ul>li>a:hover {
+  text-decoration: underline;
+}
+
+nav>ul>li.active-link>a {}
+
+
+[class*="col-"] {
+    float: left;
+    padding: 0px 10px;
   }
-    nav > ul > li{
-      display: inline-block;
-    }
-      nav > ul > li > a{
-        padding: 0 15px;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-        nav > ul > li > a:hover{
-          text-decoration: underline;
-        }
+/* this is an attribute selector. https://www.w3schools.com/css/css_attribute_selectors.asp
+it helps to allocate floating left to all classes that contain at least the title "col-" in its name
+ */
 
-        nav > ul > li.active-link > a{
+ .row::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+ /* Without this This will fix the page flow without affecting the “rows” themselves
+ weird misplacement of elements happened because when you floated the columns, you removed them from the normal flow of the page, and other elements that were below them moved up to take their place, even if it meant overlapping other elements.  */
 
-        }
+#about-page h3 { margin-top: 0;}
+/* removes margin at top of h3 headings by using the ID allocated to the boddy of the about page */
+
+#index-page h3 { margin-top: 0;}
+/* removes margin at top of h3 headings by using the ID allocated to the boddy of the index page */
+
+
+
+
+
+/* BREAKPOINTS */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+
+  header {
+    text-align: unset;
+    /* unsets text alignment made in previous header definition */
+  }
+
+  nav {
+  width: auto;
+  /* ensures that navigation will no longer take up full width of the screen - it is only as wide as the content is */
+  float: right
+  /* moves the navigation to the right hand side */
+  }
+  body{
+    font-size: 18px;
+  }
+  #hero span {
+  display: block;
+  }
+  /* ensures that the span in the header is set to block */
+
+  .col-md-6 {
+    width: 50%;
+  }
+  /* allocates 50% of screen width to 6 columns The notation we use above was specifically created to help us better understand the purpose of our code. The col is what tells us this is for columns, the md stands for medium devices (screen sizes), and the 6 is for the 6-column span we want this column to occupy. We suggest you use always use this notation. */
+
+
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+.col-lg-7 {
+  width: 60%;
+}
+
+.col-lg-5 {
+  width: 40%;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
