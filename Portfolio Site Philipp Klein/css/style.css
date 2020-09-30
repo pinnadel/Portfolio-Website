@@ -269,7 +269,7 @@ nav>ul>li.active-link>a {}
     display: none;
   }
     /* Menüeinträge werden für kleinere Bildschirme ausgeblendet */
-::marker{color:white;}
+
 
 [class*="col-"] {
     float: left;
