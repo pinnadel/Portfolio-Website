@@ -24,13 +24,17 @@ body {
 
 header {
   background-color: #ffffff;
-
-  padding: 10px 0;
+  padding: 10px 0 4px;
   /* Shadow */
   -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
   -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
   box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
 }
+
+main{
+  padding-top: 0px;
+}
+
 
 footer {}
 
@@ -122,16 +126,12 @@ a:focus {
   border-bottom: 2px solid #FFFFFF;
   /* width of the border, type, color */
   transition: 0.2s opacity;
-
-
 }
 
 .button:hover {
   text-decoration: none;
   border-right: solid #FFD400;
   border-bottom: solid #FFD400;
-
-
 }
 
 .button:active {
@@ -186,7 +186,6 @@ a:focus {
 
 .portfoliodescription {
   text-align: left;
-
 }
 
 #hero h1 {
@@ -206,35 +205,55 @@ a:focus {
   max-width: 150px;
 }
 
-img{
-    width: 100%;
-    max-height: auto;
+img {
+  width: 100%;
+  max-height: auto;
 }
 
-
-.berlin-illustration{
+.berlin-illustration {
   width 100%, max-width 100%, height: auto
 }
+
 @keyframes color-change {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
 
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
+
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .cloud-back {
@@ -242,7 +261,6 @@ img{
 }
 
 /* Illustration Animation  END*/
-
 nav {
   list-style-type: none;
   display: inline-block;
@@ -250,7 +268,9 @@ nav {
 }
 
 nav>ul {
+    list-style-type: none;
   padding: 0px;
+  margin: 0;
 }
 
 nav>ul>li>a {
@@ -266,90 +286,134 @@ nav>ul>li>a:hover {
 nav>ul>li.active-link>a {}
 
 .navtoggle li:not(:last-child) {
-    display: none;
-  }
-    /* Menüeinträge werden für kleinere Bildschirme ausgeblendet */
+  display: none;
+}
 
+/* Menüeinträge werden für kleinere Bildschirme ausgeblendet */
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+/* Position des hamburgermenüsymbols rechts. You’ll notice that we also added another selector for .navtoggle with the class .responsive attached. This isn’t for use in conjunction with your HTML (because, as you’ll remember, we didn’t add that class in our HTML) but, rather, for use with JavaScript later. This is the class we’ll use to select our menu using JavaScript and style our menu.*/
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+/*  Hamburgermenüsymbol größer machen*/
+nav {
+  display: inline-block;
+  width: 100%;
+}
+/* blank navigation menü entfernen */
 
 [class*="col-"] {
-    float: left;
-    padding: 0px 10px;
-  }
+  float: left;
+  padding: 0px 10px;
+}
+
 /* this is an attribute selector. https://www.w3schools.com/css/css_attribute_selectors.asp
 it helps to allocate floating left to all classes that contain at least the title "col-" in its name
  */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
- .row::after {
-   content: "";
-   clear: both;
-   display: table;
- }
- /* Without this This will fix the page flow without affecting the “rows” themselves
+/* Without this This will fix the page flow without affecting the “rows” themselves
  weird misplacement of elements happened because when you floated the columns, you removed them from the normal flow of the page, and other elements that were below them moved up to take their place, even if it meant overlapping other elements.  */
+#about-page h3 {
+  margin-top: 0;
+}
 
-#about-page h3 { margin-top: 0;}
 /* removes margin at top of h3 headings by using the ID allocated to the boddy of the about page */
+#index-page h3 {
+  margin-top: 0;
+}
 
-#index-page h3 { margin-top: 0;}
 /* removes margin at top of h3 headings by using the ID allocated to the boddy of the index page */
-
-
-
-
-
 /* BREAKPOINTS */
-
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-
   header {
     text-align: unset;
     /* unsets text alignment made in previous header definition */
   }
 
   nav {
-  width: auto;
-  /* ensures that navigation will no longer take up full width of the screen - it is only as wide as the content is */
-  float: right
-  /* moves the navigation to the right hand side */
+    width: auto;
+    /* ensures that navigation will no longer take up full width of the screen - it is only as wide as the content is */
+    float: right
+      /* moves the navigation to the right hand side */
   }
+
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+
   nav>ul>li {
     display: inline-block;
   }
+
   /* Menüeinträge werden untereinander angezeigt */
-
-
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
-    /* Menüeinträge werden für größere Bildschirme wieder außerhalb des toggle menüs (für kleinere Bildschirme) angezeigt angezeigt */
 
-  body{
+  /* Menüeinträge werden für größere Bildschirme wieder außerhalb des toggle menüs (für kleinere Bildschirme) angezeigt angezeigt */
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  /* hamburgermenü für größere Bildschirme ausblenden*/
+  body {
     font-size: 18px;
   }
-  #hero span {
-  display: block;
-  }
-  /* ensures that the span in the header is set to block */
 
+  #hero span {
+    display: block;
+  }
+
+  /* ensures that the span in the header is set to block */
   .col-md-6 {
     width: 50%;
   }
-  /* allocates 50% of screen width to 6 columns The notation we use above was specifically created to help us better understand the purpose of our code. The col is what tells us this is for columns, the md stands for medium devices (screen sizes), and the 6 is for the 6-column span we want this column to occupy. We suggest you use always use this notation. */
 
+  /* allocates 50% of screen width to 6 columns The notation we use above was specifically created to help us better understand the purpose of our code. The col is what tells us this is for columns, the md stands for medium devices (screen sizes), and the 6 is for the 6-column span we want this column to occupy. We suggest you use always use this notation. */
   .logo {
     max-width: 250px;
   }
-
 }
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) {}
 
 .col-lg-7 {
   width: 60%;
@@ -368,5 +432,4 @@ Large devices (1024px or larger)
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-}
+@media only screen and (min-width: 1440px) {}
