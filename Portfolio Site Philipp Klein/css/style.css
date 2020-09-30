@@ -24,7 +24,7 @@ body {
 
 header {
   background-color: #ffffff;
-  text-align: center;
+
   padding: 10px 0;
   /* Shadow */
   -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.68);
@@ -203,7 +203,7 @@ a:focus {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 img{
@@ -253,10 +253,6 @@ nav>ul {
   padding: 0px;
 }
 
-nav>ul>li {
-  display: inline-block;
-}
-
 nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
@@ -269,6 +265,11 @@ nav>ul>li>a:hover {
 
 nav>ul>li.active-link>a {}
 
+.navtoggle li:not(:last-child) {
+    display: none;
+  }
+    /* Menüeinträge werden für kleinere Bildschirme ausgeblendet */
+::marker{color:white;}
 
 [class*="col-"] {
     float: left;
@@ -314,6 +315,17 @@ Medium devices (640px and larger)
   float: right
   /* moves the navigation to the right hand side */
   }
+  nav>ul>li {
+    display: inline-block;
+  }
+  /* Menüeinträge werden untereinander angezeigt */
+
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+    /* Menüeinträge werden für größere Bildschirme wieder außerhalb des toggle menüs (für kleinere Bildschirme) angezeigt angezeigt */
+
   body{
     font-size: 18px;
   }
@@ -327,6 +339,9 @@ Medium devices (640px and larger)
   }
   /* allocates 50% of screen width to 6 columns The notation we use above was specifically created to help us better understand the purpose of our code. The col is what tells us this is for columns, the md stands for medium devices (screen sizes), and the 6 is for the 6-column span we want this column to occupy. We suggest you use always use this notation. */
 
+  .logo {
+    max-width: 250px;
+  }
 
 }
 
